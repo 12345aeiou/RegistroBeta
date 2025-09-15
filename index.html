@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Movimientos</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mi Registro de Movimientos</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('ventas')">Ventas</button>
+            <button class="tab-button" onclick="showTab('gastos')">Gastos</button>
+            <button class="tab-button" onclick="showTab('delivery')">Delivery</button>
+            <button class="tab-button" onclick="showTab('resumen')">Resumen Diario</button>
+        </div>
+
+        <div id="ventas" class="tab-content active">
+            <h2>Registrar Venta</h2>
+            <form id="form-ventas">
+                <input type="date" id="fecha-venta" required>
+                <input type="number" id="monto-venta" placeholder="Monto" required>
+                <button type="submit">Guardar Venta</button>
+            </form>
+            <div id="lista-ventas" class="lista-registros"></div>
+        </div>
+
+        <div id="gastos" class="tab-content">
+            <h2>Registrar Gasto</h2>
+            <form id="form-gastos">
+                <input type="date" id="fecha-gasto" required>
+                <input type="number" id="monto-gasto" placeholder="Monto" required>
+                <button type="submit">Guardar Gasto</button>
+            </form>
+            <div id="lista-gastos" class="lista-registros"></div>
+        </div>
+
+        <div id="delivery" class="tab-content">
+            <h2>Registrar Cobro de Delivery</h2>
+            <form id="form-delivery">
+                <input type="date" id="fecha-delivery" required>
+                <input type="number" id="monto-delivery" placeholder="Monto" required>
+                <button type="submit">Guardar Delivery</button>
+            </form>
+            <div id="lista-delivery" class="lista-registros"></div>
+        </div>
+
+        <div id="resumen" class="tab-content">
+            <h2>Ganancia Líquida Diaria</h2>
+            <div id="lista-resumen" class="lista-registros"></div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
